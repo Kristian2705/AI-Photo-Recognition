@@ -81,7 +81,7 @@ def upload_file():
         result = "AI-generated" if prediction[0][0] < 0.5 else "Real"
 
         response = render_template('human_model_page.html', result=result)
-        
+
         return response
 
 @app.route('/upload_object', methods=['POST'])
